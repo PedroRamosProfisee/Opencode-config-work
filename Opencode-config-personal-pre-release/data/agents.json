@@ -1,0 +1,233 @@
+{
+  "active": [
+    {
+      "name": "bug-fix-coordinator",
+      "path": "C:\\Users\\ramos\\.config\\opencode\\agents\\bug-fix-coordinator.md",
+      "status": "active",
+      "origin": "opencode"
+    },
+    {
+      "name": "cc-implementor",
+      "path": "C:\\Users\\ramos\\.config\\opencode\\agents\\cc-implementor.md",
+      "status": "active",
+      "origin": "opencode"
+    },
+    {
+      "name": "cc-planner",
+      "path": "C:\\Users\\ramos\\.config\\opencode\\agents\\cc-planner.md",
+      "status": "active",
+      "origin": "opencode"
+    },
+    {
+      "name": "cc-reviewer",
+      "path": "C:\\Users\\ramos\\.config\\opencode\\agents\\cc-reviewer.md",
+      "status": "active",
+      "origin": "opencode"
+    },
+    {
+      "name": "cc-tester",
+      "path": "C:\\Users\\ramos\\.config\\opencode\\agents\\cc-tester.md",
+      "status": "active",
+      "origin": "opencode"
+    },
+    {
+      "name": "cheap-cloud-implementor",
+      "path": "C:\\Users\\ramos\\.config\\opencode\\agents\\cheap-cloud-implementor.md",
+      "status": "active",
+      "origin": "opencode"
+    },
+    {
+      "name": "cost-tracking",
+      "path": "C:\\Users\\ramos\\.config\\opencode\\agents\\cost-tracking.md",
+      "status": "active",
+      "origin": "opencode"
+    },
+    {
+      "name": "docs-coordinator",
+      "path": "C:\\Users\\ramos\\.config\\opencode\\agents\\docs-coordinator.md",
+      "status": "active",
+      "origin": "opencode"
+    },
+    {
+      "name": "fb-implementor",
+      "path": "C:\\Users\\ramos\\.config\\opencode\\agents\\fb-implementor.md",
+      "status": "active",
+      "origin": "opencode"
+    },
+    {
+      "name": "fb-validator",
+      "path": "C:\\Users\\ramos\\.config\\opencode\\agents\\fb-validator.md",
+      "status": "active",
+      "origin": "opencode"
+    },
+    {
+      "name": "fc-implementor",
+      "path": "C:\\Users\\ramos\\.config\\opencode\\agents\\fc-implementor.md",
+      "status": "active",
+      "origin": "opencode"
+    },
+    {
+      "name": "fc-planner",
+      "path": "C:\\Users\\ramos\\.config\\opencode\\agents\\fc-planner.md",
+      "status": "active",
+      "origin": "opencode"
+    },
+    {
+      "name": "fc-reviewer",
+      "path": "C:\\Users\\ramos\\.config\\opencode\\agents\\fc-reviewer.md",
+      "status": "active",
+      "origin": "opencode"
+    },
+    {
+      "name": "fc-tester",
+      "path": "C:\\Users\\ramos\\.config\\opencode\\agents\\fc-tester.md",
+      "status": "active",
+      "origin": "opencode"
+    },
+    {
+      "name": "free-cloud-implementor-basic",
+      "path": "C:\\Users\\ramos\\.config\\opencode\\agents\\free-cloud-implementor-basic.md",
+      "status": "active",
+      "origin": "opencode"
+    },
+    {
+      "name": "free-cloud-implementor",
+      "path": "C:\\Users\\ramos\\.config\\opencode\\agents\\free-cloud-implementor.md",
+      "status": "active",
+      "origin": "opencode"
+    },
+    {
+      "name": "ideation-coordinator",
+      "path": "C:\\Users\\ramos\\.config\\opencode\\agents\\ideation-coordinator.md",
+      "status": "active",
+      "origin": "opencode"
+    },
+    {
+      "name": "media-interpreter",
+      "path": "C:\\Users\\ramos\\.config\\opencode\\agents\\media-interpreter.md",
+      "status": "active",
+      "origin": "opencode"
+    },
+    {
+      "name": "migration-coordinator",
+      "path": "C:\\Users\\ramos\\.config\\opencode\\agents\\migration-coordinator.md",
+      "status": "active",
+      "origin": "opencode"
+    },
+    {
+      "name": "mm-handoff-writer",
+      "path": "C:\\Users\\ramos\\.config\\opencode\\agents\\mm-handoff-writer.md",
+      "status": "active",
+      "origin": "opencode"
+    },
+    {
+      "name": "mm-investigator",
+      "path": "C:\\Users\\ramos\\.config\\opencode\\agents\\mm-investigator.md",
+      "status": "active",
+      "origin": "opencode"
+    },
+    {
+      "name": "mm-planner",
+      "path": "C:\\Users\\ramos\\.config\\opencode\\agents\\mm-planner.md",
+      "status": "active",
+      "origin": "opencode"
+    },
+    {
+      "name": "mm-researcher",
+      "path": "C:\\Users\\ramos\\.config\\opencode\\agents\\mm-researcher.md",
+      "status": "active",
+      "origin": "opencode"
+    },
+    {
+      "name": "mm-reviewer",
+      "path": "C:\\Users\\ramos\\.config\\opencode\\agents\\mm-reviewer.md",
+      "status": "active",
+      "origin": "opencode"
+    },
+    {
+      "name": "mm-router",
+      "path": "C:\\Users\\ramos\\.config\\opencode\\agents\\mm-router.md",
+      "status": "active",
+      "origin": "opencode"
+    },
+    {
+      "name": "mm-scene-tester",
+      "path": "C:\\Users\\ramos\\.config\\opencode\\agents\\mm-scene-tester.md",
+      "status": "active",
+      "origin": "opencode"
+    },
+    {
+      "name": "mm-test-writer",
+      "path": "C:\\Users\\ramos\\.config\\opencode\\agents\\mm-test-writer.md",
+      "status": "active",
+      "origin": "opencode"
+    },
+    {
+      "name": "multimodel-architect",
+      "path": "C:\\Users\\ramos\\.config\\opencode\\agents\\multimodel-architect.md",
+      "status": "active",
+      "origin": "opencode"
+    },
+    {
+      "name": "qa-coordinator",
+      "path": "C:\\Users\\ramos\\.config\\opencode\\agents\\qa-coordinator.md",
+      "status": "active",
+      "origin": "opencode"
+    },
+    {
+      "name": "security-coordinator",
+      "path": "C:\\Users\\ramos\\.config\\opencode\\agents\\security-coordinator.md",
+      "status": "active",
+      "origin": "opencode"
+    },
+    {
+      "name": "test-writer",
+      "path": "C:\\Users\\ramos\\.config\\opencode\\agents\\test-writer.md",
+      "status": "active",
+      "origin": "opencode"
+    },
+    {
+      "name": "uiux-coordinator",
+      "path": "C:\\Users\\ramos\\.config\\opencode\\agents\\uiux-coordinator.md",
+      "status": "active",
+      "origin": "opencode"
+    }
+  ],
+  "archived": [
+    {
+      "name": "swarm-implementor",
+      "archivedPath": "C:\\Users\\ramos\\.config\\opencode\\.archive\\2026-04-11-token-reduction\\agents\\swarm-implementor.md",
+      "note": "Archived duplicate to prune active surface"
+    },
+    {
+      "name": "swarm-manager",
+      "archivedPath": "C:\\Users\\ramos\\.config\\opencode\\.archive\\2026-04-11-token-reduction\\agents\\swarm-manager.md",
+      "note": "Archived duplicate to prune active surface"
+    },
+    {
+      "name": "swarm-planner",
+      "archivedPath": "C:\\Users\\ramos\\.config\\opencode\\.archive\\2026-04-11-token-reduction\\agents\\swarm-planner.md",
+      "note": "Archived duplicate to prune active surface"
+    },
+    {
+      "name": "swarm-reviewer",
+      "archivedPath": "C:\\Users\\ramos\\.config\\opencode\\.archive\\2026-04-11-token-reduction\\agents\\swarm-reviewer.md",
+      "note": "Archived duplicate to prune active surface"
+    },
+    {
+      "name": "swarm-tester",
+      "archivedPath": "C:\\Users\\ramos\\.config\\opencode\\.archive\\2026-04-11-token-reduction\\agents\\swarm-tester.md",
+      "note": "Archived duplicate to prune active surface"
+    }
+  ],
+  "not_hooked": [
+    {
+      "name": "debug",
+      "reason": "Auxiliary utility not integrated into MM-router flow"
+    },
+    {
+      "name": "local-implementor",
+      "reason": "Local helper not wired to pipeline stages"
+    }
+  ]
+}

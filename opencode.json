@@ -1,26 +1,50 @@
 {
   "$schema": "https://opencode.ai/config.json",
-  "model": "github-copilot/claude-opus-4.6",
-  "agent": {
-    "build": {
-      "mode": "primary",
-      "model": "github-copilot/claude-opus-4.6"
-    },
-    "plan": {
-      "mode": "primary",
-      "model": "github-copilot/claude-sonnet-4.5"
-    }
+  "server": {
+    "port": 4096
   },
+  "instructions": [
+    "rules/bash-safety.md",
+    "rules/context-management.md",
+    "rules/patterns-common.md",
+    "rules/vibe-coding-summary.md",
+    "If a file named `.codesight/CODESIGHT.md` exists in the project root, read it at the start of the session and use it as a file and symbol index. Do not read it automatically if it does not exist.",
+    "When unclear on requirements, use AUQ (ask-user-questions) MCP tool instead of guessing. Batch multiple questions into one call. Never guess when you can ask."
+  ],
   "plugin": [
     "opencode-notify",
     "@cortexkit/opencode-magic-context"
   ],
   "compaction": {
-    "auto": false,
-    "prune": false
+    "auto": true,
+    "prune": false,
+    "reserved": 20000
   },
   "permission": {
     "edit": "allow",
     "bash": "ask"
+  },
+  "mcp": {
+    "codesight": {
+      "type": "local",
+      "command": [
+        "npx",
+        "codesight",
+        "--mcp"
+      ],
+      "timeout": 30000
+    }
+  },
+  "provider": {
+    "cheap-cloud": {
+      "npm": "@ai-sdk/openai",
+      "name": "Cheap Cloud",
+      "models": {
+        "gpt-4o-mini": {
+          "name": "GPT-4o Mini",
+          "prompt": "prompts/core/openagent/gpt-mini-implementor.md"
+        }
+      }
+    }
   }
 }

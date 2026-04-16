@@ -1,0 +1,13 @@
+{
+  "Godot": {
+    "GODOT_EXECUTABLE": "C:\\Users\\ramos\\tools\\godot\\Godot_v4.6.1-stable_mono_win64.exe"
+  },
+  "Codesight": {
+    "CMD": "npx codesight --mcp"
+  },
+  "Ori": {
+    "ORI_VAULT": "C:\\Users\\ramos\\.ori-memory",
+    "ORI_BRIDGE": "C:\\tmp\\ori-bridge\\dist\\index.js",
+    "VAULT_MOUNT": "C:\\Users\\ramos\\.ori-memory"
+  }
+}
