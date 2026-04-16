@@ -11,13 +11,13 @@ Every coordinator **must** roll up costs into `run.status.json` and `cost-summar
 | Model ID | Provider | Input ($/1K tokens) | Output ($/1K tokens) | Tier |
 |----------|----------|---------------------|----------------------|------|
 | `github-copilot/gpt-4o` | OpenAI | $0.0000 | $0.0000 | Free |
-| `github-copilot/gpt-4o-mini` | OpenAI | $0.0000 | $0.0000 | Free |
+| `github-copilot/gpt-4o` | OpenAI | $0.0000 | $0.0000 | Free |
 | `github-copilot/gpt-4o` | OpenAI | $0.0000 | $0.0000 | Free |
 | `github-copilot/claude-haiku-4.5` | Anthropic | $0.0008 | $0.004 | Cheap |
 | `github-copilot/claude-sonnet-4.6` | Anthropic | $0.003 | $0.015 | Premium |
 | `github-copilot/claude-opus-4.6` | Anthropic | $0.015 | $0.075 | Premium |
 
-> **Note:** Free-tier models (gpt-4o, gpt-4o-mini) are billed $0.00 via GitHub Copilot quota.
+> **Note:** Free-tier models (gpt-4o) are billed $0.00 via GitHub Copilot quota.
 > Haiku/Sonnet/Opus are estimated based on Anthropic public pricing per 1K tokens.
 > Token counts are **estimates** — count input prompt length + output length.
 >
@@ -182,7 +182,7 @@ Coordinators write this to `.runs/{runId}/cost-summary.json` on completion:
 
 ### Free tier calculation
 
-For `gpt-4o`, `gpt-4o-mini` — all rates = $0.00.
+For `gpt-4o` — all rates = $0.00.
 Still record token estimates for pipeline analysis (parallel efficiency, context sizing).
 
 ---

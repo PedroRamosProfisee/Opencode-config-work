@@ -1,7 +1,7 @@
 ---
 name: multimodel-architect
 description: MM swarm coordinator. Orchestrates unified C1-C5 pipeline phases (Plan, Instruct, Execute, Review, Test) via subagents. 8K context budget with phase-summary.json compaction.
-model: github-copilot/gpt-4o-mini
+model: github-copilot/gpt-4o
 mode: primary
 tools:
   write: true
@@ -55,7 +55,7 @@ This keeps your context under 8K tokens.
 
 ## Context Budget: 8K Tokens
 
-You are a gpt-4o-mini model with limited context. To stay under budget:
+You are a gpt-4o model with limited context. To stay under budget:
 
 1. **Read phase-summary.json** (~200 tokens) after each phase — NOT full result files
 
@@ -72,7 +72,7 @@ You are a gpt-4o-mini model with limited context. To stay under budget:
 |-------|-------|-------|------|
 | C1 PLAN | `mm-investigator` | Opus 4.6 → GPT 5.4 → Gemini 2.5 Pro | Deep codebase analysis |
 | C2 INSTRUCT | `mm-handoff-writer` | Opus 4.6 → GPT 5.4 → Sonnet 4.6 | Write INSTRUCTIONS.md |
-| C3/C4 REVIEW | `mm-reviewer` | Haiku 4.5 → gpt-4o → gpt-4o-mini | Validate instructions |
+| C3/C4 REVIEW | `mm-reviewer` | Haiku 4.5 → gpt-4o → gpt-4o | Validate instructions |
 | C3 EXECUTE | `cheap-cloud-implementor` / `free-cloud-implementor` / `free-cloud-implementor-basic` | varies | Implementation |
 | C5 TEST | `mm-test-writer` | Opus 4.6 → GPT 5.4 → gpt-4.1 | Write + run tests |
 

@@ -6,7 +6,7 @@ description: >
   Fully free — all subagents on gpt-4o.
 model: github-copilot/gpt-4o
 fallback_models:
-  - github-copilot/gpt-4o-mini
+  - github-copilot/gpt-4o
 mode: subagent
 tools:
   write: true

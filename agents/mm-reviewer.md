@@ -4,7 +4,7 @@ description: C4 REVIEW phase agent. Validates INSTRUCTIONS.md completeness and i
 model: github-copilot/claude-haiku-4.5
 fallback_models:
   - github-copilot/gpt-4o
-  - github-copilot/gpt-4o-mini
+  - github-copilot/gpt-4o
 reasoningEffort: extra_high
 mode: subagent
 tools:
