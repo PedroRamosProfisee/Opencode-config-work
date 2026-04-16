@@ -5,7 +5,7 @@
 #   - Git must be installed and on PATH
 #   - You must be authenticated to GitHub as PedroRamosProfisee (or have push access to the repo)
 #   - The remote repo https://github.com/PedroRamosProfisee/Opencode-config-work must already exist
-#     (create it at https://github.com/new if not — do NOT initialize with README)
+#     (create it at https://github.com/new if not - do NOT initialize with README)
 #
 # USAGE:
 #   .\push-work-repo.ps1
@@ -28,7 +28,6 @@ Write-Host "Branch : $Branch"
 Write-Host "Message: $Message"
 Write-Host ""
 
-# Safety check — confirm before proceeding
 $confirm = Read-Host "Review the above. Proceed? (y/N)"
 if ($confirm -ne 'y' -and $confirm -ne 'Y') {
     Write-Host "Aborted." -ForegroundColor Yellow
@@ -37,7 +36,6 @@ if ($confirm -ne 'y' -and $confirm -ne 'Y') {
 
 Set-Location $RepoPath
 
-# Init if not already a git repo
 if (-not (Test-Path ".git")) {
     Write-Host "`nInitializing git repo..." -ForegroundColor Green
     git init -b $Branch
@@ -46,7 +44,6 @@ if (-not (Test-Path ".git")) {
     Write-Host "`nGit repo already initialized." -ForegroundColor Yellow
 }
 
-# Set or update remote
 $existingRemote = git remote get-url origin 2>$null
 if ($existingRemote) {
     Write-Host "Updating remote origin to $Remote" -ForegroundColor Green
@@ -56,31 +53,27 @@ if ($existingRemote) {
     git remote add origin $Remote
 }
 
-# Stage all changes
 Write-Host "`nStaging all files..." -ForegroundColor Green
 git add -A
 
-# Show what will be committed
 Write-Host "`nFiles staged:" -ForegroundColor Cyan
 git status --short
 
 Write-Host ""
 $confirm2 = Read-Host "Commit and push? (y/N)"
 if ($confirm2 -ne 'y' -and $confirm2 -ne 'Y') {
-    Write-Host "Staged but not committed. Run 'git commit' manually when ready." -ForegroundColor Yellow
+    Write-Host "Staged but not committed. Run git commit manually when ready." -ForegroundColor Yellow
     exit 0
 }
 
-# Commit
 git commit -m $Message
 if ($LASTEXITCODE -ne 0) { Write-Host "git commit failed." -ForegroundColor Red; exit 1 }
 
-# Push
 Write-Host "`nPushing to $Remote ($Branch)..." -ForegroundColor Green
 git push -u origin $Branch
 if ($LASTEXITCODE -ne 0) {
     Write-Host "`nPush failed. Common causes:" -ForegroundColor Red
-    Write-Host "  - Repo doesn't exist yet at $Remote" -ForegroundColor Yellow
+    Write-Host "  - Repo does not exist yet at $Remote" -ForegroundColor Yellow
     Write-Host "    Create it at https://github.com/new (do NOT add README/gitignore)" -ForegroundColor Yellow
     Write-Host "  - Not authenticated as PedroRamosProfisee" -ForegroundColor Yellow
     Write-Host "    Run: gh auth switch  OR  gh auth login" -ForegroundColor Yellow
