@@ -1,0 +1,223 @@
+{
+    "schemaVersion":  "1.0",
+    "system":  "mm-swarm",
+    "defaults":  {
+                     "modelTier":  "standard",
+                     "maxAUQPerRun":  3,
+                     "maxReviewLoops":  3,
+                     "maxRetries":  2,
+                     "contextBudgetTokens":  8192,
+                     "phaseSummaryMaxTokens":  200,
+                     "runLogLocation":  "project",
+                     "fallbackRunLogLocation":  "C:\\Users\\ramos\\.config\\.runs"
+                 },
+    "pipelineTypes":  {
+                          "A":  {
+                                    "name":  "Research",
+                                    "coordinator":  "mm-researcher"
+                                },
+                          "B":  {
+                                    "name":  "Build",
+                                    "coordinator":  "multimodel-architect"
+                                },
+                          "C":  {
+                                    "name":  "Mixed",
+                                    "coordinator":  "multimodel-architect",
+                                    "prePhase":  "mm-researcher"
+                                },
+                          "D":  {
+                                    "name":  "Trivial",
+                                    "coordinator":  "free-cloud-implementor-basic"
+                                },
+                          "E":  {
+                                    "name":  "Test",
+                                    "coordinator":  "mm-scene-tester",
+                                    "prePhase":  "mm-investigator"
+                                },
+                          "F":  {
+                                    "name":  "Bug Fix",
+                                    "coordinator":  "bug-fix-coordinator"
+                                },
+                          "G":  {
+                                    "name":  "Docs",
+                                    "coordinator":  "docs-coordinator"
+                                },
+                          "H":  {
+                                    "name":  "Migration",
+                                    "coordinator":  "migration-coordinator"
+                                },
+                          "I":  {
+                                    "name":  "Ideation",
+                                    "coordinator":  "ideation-coordinator"
+                                },
+                          "J":  {
+                                    "name":  "QA",
+                                    "coordinator":  "qa-coordinator"
+                                },
+                          "K":  {
+                                    "name":  "Security",
+                                    "coordinator":  "security-coordinator"
+                                },
+                          "L":  {
+                                    "name":  "UI/UX",
+                                    "coordinator":  "uiux-coordinator"
+                                }
+                      },
+    "modelFallbackChains":  {
+                                "router":  [
+                                               "opencode-go/minimax-m2.5",
+                                               "github-copilot/gpt-4o-mini"
+                                           ],
+                                "investigator":  [
+                                                     "github-copilot/claude-opus-4.6",
+                                                     "github-copilot/gpt-5.4",
+                                                     "github-copilot/gemini-2.5-pro"
+                                                 ],
+                                "planner":  [
+                                                "github-copilot/claude-opus-4.6",
+                                                "github-copilot/gpt-5.4",
+                                                "github-copilot/claude-sonnet-4.6"
+                                            ],
+                                "instructionWriter":  [
+                                                          "github-copilot/claude-opus-4.6",
+                                                          "github-copilot/gpt-5.4",
+                                                          "github-copilot/claude-sonnet-4.6"
+                                                      ],
+                                "implementor":  [
+                                                    "opencode-go/minimax-m2.7",
+                                                    "github-copilot/gpt-4.1",
+                                                    "github-copilot/gpt-4o"
+                                                ],
+                                "reviewer":  [
+                                                 "github-copilot/claude-haiku-4.5",
+                                                 "opencode-go/minimax-m2.7",
+                                                 "github-copilot/gpt-4o-mini"
+                                             ],
+                                "tester":  [
+                                               "opencode-go/minimax-m2.7",
+                                               "github-copilot/gpt-4o-mini"
+                                           ],
+                                "testWriter":  [
+                                                   "github-copilot/claude-opus-4.6",
+                                                   "github-copilot/gpt-5.4",
+                                                   "github-copilot/gpt-4.1"
+                                               ],
+                                "debugger":  [
+                                                 "github-copilot/claude-opus-4.6",
+                                                 "github-copilot/gpt-5.4",
+                                                 "github-copilot/gemini-2.5-pro"
+                                             ],
+                                "researcher":  [
+                                                   "github-copilot/claude-opus-4.6",
+                                                   "github-copilot/gpt-5.4",
+                                                   "github-copilot/gemini-2.5-pro"
+                                               ],
+                                "mediaInterpreter":  [
+                                                         "github-copilot/gpt-5.4",
+                                                         "github-copilot/gemini-2.5-pro"
+                                                     ],
+                                "coordinator":  [
+                                                    "opencode-go/minimax-m2.7",
+                                                    "github-copilot/gpt-4o"
+                                                ]
+                            },
+    "corePipeline":  {
+                         "C1":  "PLAN",
+                         "C2":  "INSTRUCT",
+                         "C3":  "EXECUTE",
+                         "C4":  "REVIEW",
+                         "C5":  "TEST"
+                     },
+    "smartAUQ":  {
+                     "ALWAYS":  "Pipeline entry (2-step: tier + Go/Modify/Cancel)",
+                     "CONDITIONAL":  "Plan review (complex tasks), ambiguity \u003c 0.5, post-rejection after 2 retries, migration/security plans",
+                     "NEVER":  "Between instruct/execute, during execute, between test-write/test-run, Trivial tasks",
+                     "confidenceThresholds":  {
+                                                  "auto":  0.8,
+                                                  "proceedWithFlag":  0.5,
+                                                  "stop":  0.0
+                                              }
+                 },
+    "pricing":  {
+                    "claude-opus-4.6":  {
+                                            "input":  0.015,
+                                            "output":  0.075,
+                                            "unit":  "per1KTokens"
+                                        },
+                    "claude-sonnet-4.6":  {
+                                              "input":  0.003,
+                                              "output":  0.015,
+                                              "unit":  "per1KTokens"
+                                          },
+                    "claude-haiku-4.5":  {
+                                             "input":  0.0008,
+                                             "output":  0.004,
+                                             "unit":  "per1KTokens"
+                                         },
+                    "gpt-5.4":  {
+                                    "input":  0,
+                                    "output":  0,
+                                    "unit":  "flatRate",
+                                    "note":  "Copilot subscription"
+                                },
+                    "gpt-4.1":  {
+                                    "input":  0,
+                                    "output":  0,
+                                    "unit":  "flatRate",
+                                    "note":  "Copilot subscription"
+                                },
+                    "gpt-4o":  {
+                                   "input":  0,
+                                   "output":  0,
+                                   "unit":  "flatRate",
+                                   "note":  "Copilot subscription"
+                               },
+                    "gpt-4o-mini":  {
+                                        "input":  0,
+                                        "output":  0,
+                                        "unit":  "flatRate",
+                                        "note":  "Copilot subscription"
+                                    },
+                    "gemini-2.5-pro":  {
+                                           "input":  0,
+                                           "output":  0,
+                                           "unit":  "freeTier"
+                                       },
+                    "minimax-m2.5":  {
+                                         "input":  0,
+                                         "output":  0,
+                                         "unit":  "freeTier"
+                                     },
+                    "minimax-m2.7":  {
+                                         "input":  0,
+                                         "output":  0,
+                                         "unit":  "freeTier"
+                                     }
+                },
+    "phaseSummarySchema":  {
+                               "ph":  "string — phase name (investigation|planning|instruction|review|execution|testing|debugging)",
+                               "rid":  "string — runId",
+                               "ts":  "ISO 8601 — completedAt",
+                               "s":  "string — status (ok|err|warn)",
+                               "kf":  [
+                                          "max 5 items, ~200 tokens total — keyFindings"
+                                      ],
+                               "np":  "string — nextPhase",
+                               "rdy":  "boolean — readyForHandoff",
+                               "_optional":  {
+                                                 "cx":  "string — complexity (trivial|simple|moderate|complex|architectural)",
+                                                 "f":  [
+                                                           "array — files involved"
+                                                       ],
+                                                 "iss":  [
+                                                             "array — issues if s=err or s=warn"
+                                                         ],
+                                                 "dec":  [
+                                                             {
+                                                                 "id":  "string",
+                                                                 "txt":  "string"
+                                                             }
+                                                         ]
+                                             }
+                           }
+}

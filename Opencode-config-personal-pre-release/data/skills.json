@@ -1,0 +1,86 @@
+[
+  {
+    "name": "antivibe",
+    "origin": "opencode",
+    "path": "C:\\Users\\ramos\\.config\\opencode\\skills\\antivibe",
+    "notes": "Anti-vibecoding learning framework"
+  },
+  {
+    "name": "context",
+    "origin": "opencode",
+    "path": "C:\\Users\\ramos\\.config\\opencode\\skills\\context",
+    "notes": "Context management"
+  },
+  {
+    "name": "context7",
+    "origin": "opencode",
+    "path": "C:\\Users\\ramos\\.config\\opencode\\skills\\context7",
+    "notes": "Documentation-oriented context"
+  },
+  {
+    "name": "graphify",
+    "origin": "opencode",
+    "path": "C:\\Users\\ramos\\.config\\opencode\\skills\\graphify",
+    "notes": "Knowledge graph from code/docs"
+  },
+  {
+    "name": "ori-memory",
+    "origin": "opencode",
+    "path": "C:\\Users\\ramos\\.config\\opencode\\skills\\ori-memory",
+    "notes": "Ori-memory MCP tools"
+  },
+  {
+    "name": "smart-router-skill",
+    "origin": "opencode",
+    "path": "C:\\Users\\ramos\\.config\\opencode\\skills\\smart-router-skill",
+    "notes": "Smart routing behavior"
+  },
+  {
+    "name": "task-management",
+    "origin": "opencode",
+    "path": "C:\\Users\\ramos\\.config\\opencode\\skills\\task-management",
+    "notes": "Task management toolkit"
+  },
+  {
+    "name": "caveman",
+    "origin": "global",
+    "path": "C:\\Users\\ramos\\.agents\\skills\\caveman",
+    "notes": "Ultra-efficient communication"
+  },
+  {
+    "name": "caveman-commit",
+    "origin": "global",
+    "path": "C:\\Users\\ramos\\.agents\\skills\\caveman-commit",
+    "notes": "Compact commit messages"
+  },
+  {
+    "name": "caveman-compress",
+    "origin": "global",
+    "path": "C:\\Users\\ramos\\.agents\\skills\\caveman-compress",
+    "notes": "Memory compression"
+  },
+  {
+    "name": "caveman-help",
+    "origin": "global",
+    "path": "C:\\Users\\ramos\\.agents\\skills\\caveman-help",
+    "notes": "Caveman quick reference"
+  },
+  {
+    "name": "caveman-review",
+    "origin": "global",
+    "path": "C:\\Users\\ramos\\.agents\\skills\\caveman-review",
+    "notes": "Ultra-compressed code review"
+  },
+  {
+    "name": "find-skills",
+    "origin": "global",
+    "path": "C:\\Users\\ramos\\.agents\\skills\\find-skills",
+    "notes": "Skill discovery"
+  },
+  {
+    "name": "ui-ux-pro-max",
+    "origin": "global",
+    "path": "C:\\Users\\ramos\\.agents\\skills\\ui-ux-pro-max",
+    "notes": "UI/UX design intelligence"
+  }
+]

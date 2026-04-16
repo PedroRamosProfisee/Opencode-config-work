@@ -1,0 +1,34 @@
+{
+  "$schema": "https://raw.githubusercontent.com/cortexkit/opencode-magic-context/master/assets/magic-context.schema.json",
+  "enabled": true,
+
+  "historian": {
+    "model": "github-copilot/claude-sonnet-4.5",
+    "fallback_models": ["github-copilot/gpt-5.4"],
+    // Caveman-compressed summaries: same semantic density at ~40% token cost.
+    // Format: "WHAT: <action>. WHY: <reason>. DECISION: <choice>. FILES: <paths>. ERRORS: <issues+fixes>."
+    "system_prompt": "Summarize this session in caveman-compressed format. Use short telegraphic phrases. No filler words. No full sentences unless required for clarity. Structure: WHAT: <core action done>. WHY: <reason/goal>. DECISIONS: <key choices made, one per line>. FILES: <files changed/created>. ERRORS: <problems encountered + resolutions>. NEXT: <open threads or next steps>. Max 300 tokens total. Omit any section with no content."
+  },
+
+  "dreamer": {
+    "enabled": true,
+    "model": "github-copilot/claude-sonnet-4.5",
+    "fallback_models": ["github-copilot/gpt-5.4"],
+    "schedule": "02:00-06:00",
+    "tasks": ["consolidate", "verify", "archive-stale", "improve"]
+  },
+
+  "embedding": {
+    "provider": "local"
+  },
+
+  "memory": {
+    "enabled": true,
+    "injection_budget_tokens": 4000,
+    "auto_promote": true
+  },
+
+  "sidekick": {
+    "enabled": false
+  }
+}
