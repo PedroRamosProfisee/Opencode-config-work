@@ -25,6 +25,11 @@
     "bash": "ask"
   },
   "mcp": {
+    "ado": {
+      "type": "local",
+      "command": ["npx", "-y", "@azure-devops/mcp@next", "profisee", "-d", "core", "work-items", "repositories", "pipelines", "wiki", "test-plans", "search"],
+      "enabled": true
+    },
     "codesight": {
       "type": "local",
       "command": [
