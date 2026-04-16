@@ -3,7 +3,7 @@ name: fc-implementor
 description: >
   Code implementation subagent for Free Cloud pipeline. Makes surgical
   code changes per plan. Spawned in parallel for multi-file operations.
-model: opencode-go/minimax-m2.7
+model: github-copilot/gpt-4o
 mode: subagent
 tools:
   write: true
@@ -69,7 +69,7 @@ Write **`result-implementor.json`** to run folder:
   },
   "blockedReason": null,
   "cost": {
-    "model": "opencode-go/minimax-m2.7",
+    "model": "github-copilot/gpt-4o",
     "tier": "free",
     "inputTokens": 600,
     "outputTokens": 300,
@@ -86,7 +86,7 @@ Write **`result-implementor.json`** to run folder:
 
 1. Estimate `inputTokens` = characters in prompt received ÷ 4
 2. Estimate `outputTokens` = characters in your response ÷ 4
-3. Model `opencode-go/minimax-m2.7` = free tier → all costs $0.00
+3. Model `github-copilot/gpt-4o` = free tier → all costs $0.00
 4. Still record token counts for pipeline analysis
 
 ## Workflow

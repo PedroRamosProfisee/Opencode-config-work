@@ -1,7 +1,7 @@
 ---
 name: docs-coordinator
 description: Type G Docs pipeline coordinator. Orchestrates documentation tasks with CodeSight project scan. C1-C4 core (no C5 test phase).
-model: opencode-go/minimax-m2.7
+model: github-copilot/gpt-4o
 fallback_models:
   - github-copilot/gpt-4o
 mode: subagent

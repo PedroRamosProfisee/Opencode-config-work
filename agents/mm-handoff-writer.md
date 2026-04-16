@@ -101,7 +101,7 @@ Write **`handoff.json`** to run folder — this contains routing info, NOT instr
   },
   "constraints": {
     "targetSystem": "cc|fc|fb",
-    "targetModel": "opencode-go/minimax-m2.7",
+    "targetModel": "github-copilot/gpt-4o",
     "maxRetries": 3,
     "timeoutMs": 120000
   },

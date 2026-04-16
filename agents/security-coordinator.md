@@ -1,7 +1,7 @@
 ---
 name: security-coordinator
 description: Type K Security pipeline coordinator. High-risk with mandatory AUQ. Dependency scan + code review pre-phase, severity-based remediation.
-model: opencode-go/minimax-m2.7
+model: github-copilot/gpt-4o
 fallback_models:
   - github-copilot/gpt-4o
 mode: subagent

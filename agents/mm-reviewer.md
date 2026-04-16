@@ -3,7 +3,7 @@ name: mm-reviewer
 description: C4 REVIEW phase agent. Validates INSTRUCTIONS.md completeness and instruction clarity. Checks CodeSight coverage. Fast structured review via Haiku 4.5.
 model: github-copilot/claude-haiku-4.5
 fallback_models:
-  - opencode-go/minimax-m2.7
+  - github-copilot/gpt-4o
   - github-copilot/gpt-4o-mini
 reasoningEffort: extra_high
 mode: subagent
@@ -88,7 +88,7 @@ Write **`review-result.json`** to run folder:
     "inputCostUSD": 0.0014,
     "outputCostUSD": 0.0012,
     "totalCostUSD": 0.0026,
-    "note": "Haiku 4.5 rates. Falls back to minimax (free) on failure."
+    "note": "Haiku 4.5 rates. Falls back to gpt-4o on failure."
   },
   "createdAt": "ISO 8601"
 }

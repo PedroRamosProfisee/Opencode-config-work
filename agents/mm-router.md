@@ -1,7 +1,7 @@
 ---
 name: mm-router
 description: Single entry-point router for the MM swarm. Classifies tasks into 12 types (A-L), detects visual research needs, plans pipelines, and confirms with user before execution. Smart AUQ with confidence scoring.
-model: opencode-go/minimax-m2.5
+model: github-copilot/gpt-4o-mini
 mode: primary
 tools:
   write: true
