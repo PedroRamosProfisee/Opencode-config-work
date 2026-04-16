@@ -1,0 +1,31 @@
+{
+  "$schema": "https://raw.githubusercontent.com/cortexkit/opencode-magic-context/master/assets/magic-context.schema.json",
+  "enabled": true,
+
+  "historian": {
+    "model": "github-copilot/claude-sonnet-4.5",
+    "fallback_models": ["github-copilot/gpt-5.4"]
+  },
+
+  "dreamer": {
+    "enabled": true,
+    "model": "github-copilot/claude-sonnet-4.5",
+    "fallback_models": ["github-copilot/gpt-5.4"],
+    "schedule": "02:00-06:00",
+    "tasks": ["consolidate", "verify", "archive-stale", "improve"]
+  },
+
+  "embedding": {
+    "provider": "local"
+  },
+
+  "memory": {
+    "enabled": true,
+    "injection_budget_tokens": 4000,
+    "auto_promote": true
+  },
+
+  "sidekick": {
+    "enabled": false
+  }
+}

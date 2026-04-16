@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "@cortexkit/opencode-magic-context": "^0.7.4",
+    "@opencode-ai/plugin": "1.2.25"
+  }
+}
