@@ -64,10 +64,10 @@
                                 }
                       },
     "modelFallbackChains":  {
-                                "router":  [
-                                               "opencode-go/minimax-m2.5",
-                                               "github-copilot/gpt-4o-mini"
-                                           ],
+                "router":  [
+                                                "github-copilot/gpt-4o",
+                                                "github-copilot/gpt-4.1"
+                                            ],
                                 "investigator":  [
                                                      "github-copilot/claude-opus-4.6",
                                                      "github-copilot/gpt-5.4",
@@ -83,20 +83,20 @@
                                                           "github-copilot/gpt-5.4",
                                                           "github-copilot/claude-sonnet-4.6"
                                                       ],
-                                "implementor":  [
-                                                    "opencode-go/minimax-m2.7",
-                                                    "github-copilot/gpt-4.1",
-                                                    "github-copilot/gpt-4o"
-                                                ],
+                "implementor":  [
+                                                     "github-copilot/gpt-4.1",
+                                                     "github-copilot/gpt-4o",
+                                                     "github-copilot/claude-sonnet-4.6"
+                                                 ],
                                 "reviewer":  [
                                                  "github-copilot/claude-haiku-4.5",
-                                                 "opencode-go/minimax-m2.7",
-                                                 "github-copilot/gpt-4o-mini"
+                                                 "github-copilot/gpt-4o",
+                                                 "github-copilot/gpt-4.1"
                                              ],
-                                "tester":  [
-                                               "opencode-go/minimax-m2.7",
-                                               "github-copilot/gpt-4o-mini"
-                                           ],
+                "tester":  [
+                                                "github-copilot/gpt-4o",
+                                                "github-copilot/gpt-4.1"
+                                            ],
                                 "testWriter":  [
                                                    "github-copilot/claude-opus-4.6",
                                                    "github-copilot/gpt-5.4",
@@ -116,10 +116,10 @@
                                                          "github-copilot/gpt-5.4",
                                                          "github-copilot/gemini-2.5-pro"
                                                      ],
-                                "coordinator":  [
-                                                    "opencode-go/minimax-m2.7",
-                                                    "github-copilot/gpt-4o"
-                                                ]
+                "coordinator":  [
+                                                     "github-copilot/gpt-4o",
+                                                     "github-copilot/gpt-4.1"
+                                                 ]
                             },
     "corePipeline":  {
                          "C1":  "PLAN",
@@ -172,28 +172,12 @@
                                    "unit":  "flatRate",
                                    "note":  "Copilot subscription"
                                },
-                    "gpt-4o-mini":  {
-                                        "input":  0,
-                                        "output":  0,
-                                        "unit":  "flatRate",
-                                        "note":  "Copilot subscription"
-                                    },
-                    "gemini-2.5-pro":  {
-                                           "input":  0,
-                                           "output":  0,
-                                           "unit":  "freeTier"
-                                       },
-                    "minimax-m2.5":  {
-                                         "input":  0,
-                                         "output":  0,
-                                         "unit":  "freeTier"
-                                     },
-                    "minimax-m2.7":  {
-                                         "input":  0,
-                                         "output":  0,
-                                         "unit":  "freeTier"
-                                     }
-                },
+                     "gemini-2.5-pro":  {
+                                            "input":  0,
+                                            "output":  0,
+                                            "unit":  "freeTier"
+                                        }
+                 },
     "phaseSummarySchema":  {
                                "ph":  "string — phase name (investigation|planning|instruction|review|execution|testing|debugging)",
                                "rid":  "string — runId",
