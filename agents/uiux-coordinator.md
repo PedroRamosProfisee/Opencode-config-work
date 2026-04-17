@@ -1,7 +1,7 @@
 ---
 name: uiux-coordinator
 description: Type L UI/UX pipeline coordinator. Media-interpreter pre-phase (always), design analysis, AUQ for direction, design-focused review.
-model: opencode-go/minimax-m2.7
+model: github-copilot/gpt-4o
 fallback_models:
   - github-copilot/gpt-4o
 mode: subagent

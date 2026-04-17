@@ -3,8 +3,8 @@ name: cc-implementor
 description: >
   Code implementation subagent for Cheap Cloud pipeline. Makes surgical
   code changes per plan. Spawned in parallel for multi-file operations.
-  Minimax-m2.7 for cost-effective code generation.
-model: opencode-go/minimax-m2.7
+  gpt-4o for cost-effective code generation.
+model: github-copilot/gpt-4o
 fallback_models:
   - github-copilot/claude-haiku-4.5
 mode: subagent
@@ -82,7 +82,7 @@ Write **`result-implementor.json`** (or `result-implementor-{taskId}.json` if pa
   },
   "blockedReason": null,
   "cost": {
-    "model": "opencode-go/minimax-m2.7",
+    "model": "github-copilot/gpt-4o",
     "tier": "free",
     "inputTokens": 600,
     "outputTokens": 300,
@@ -99,7 +99,7 @@ Write **`result-implementor.json`** (or `result-implementor-{taskId}.json` if pa
 
 1. Estimate `inputTokens` = characters in prompt received ÷ 4
 2. Estimate `outputTokens` = characters in your response ÷ 4
-3. Model `opencode-go/minimax-m2.7` = free tier → all costs $0.00
+3. Model `github-copilot/gpt-4o` = free tier → all costs $0.00
 4. Still record token counts — Coordinator uses them for pipeline analysis
 
 ## Workflow

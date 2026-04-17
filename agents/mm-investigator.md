@@ -144,7 +144,7 @@ Write **`investigation-report.json`** to run folder:
   },
   "recommendation": {
     "targetSystem": "cc|fc|fb",
-    "targetModel": "opencode-go/minimax-m2.7",
+    "targetModel": "github-copilot/gpt-4o",
     "parallelFiles": 1,
     "reasoning": "Why this model/system chosen"
   },

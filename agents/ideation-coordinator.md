@@ -1,7 +1,7 @@
 ---
 name: ideation-coordinator
 description: Type I Ideation pipeline coordinator. Research pre-phase, concept generation, AUQ for preference, design doc output. C3 writes design doc (not code).
-model: opencode-go/minimax-m2.7
+model: github-copilot/gpt-4o
 fallback_models:
   - github-copilot/gpt-4o
 mode: subagent

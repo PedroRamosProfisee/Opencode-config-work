@@ -3,10 +3,10 @@ name: free-cloud-implementor-basic
 description: >
   Lightweight swarm coordinator for trivial tasks. 3-role pipeline:
   coordinator → implementor → validator. No planner needed for atomic edits.
-  Fully free — all subagents on minimax-m2.7.
-model: opencode-go/minimax-m2.7
+  Fully free — all subagents on gpt-4o.
+model: github-copilot/gpt-4o
 fallback_models:
-  - github-copilot/gpt-4o-mini
+  - github-copilot/gpt-4o
 mode: subagent
 tools:
   write: true
@@ -64,8 +64,8 @@ If `.runs/{runId}/result-*.json` does not exist, you cannot proceed to the next 
 
 | Agent | Model | Role |
 |-------|-------|------|
-| `fb-implementor` | minimax-m2.7 | Simple code changes |
-| `fb-validator` | minimax-m2.7 | Build check + basic review |
+| `fb-implementor` | gpt-4o | Simple code changes |
+| `fb-validator` | gpt-4o | Build check + basic review |
 
 ## Pipeline
 
@@ -168,7 +168,7 @@ At end of run, write `.runs/{runId}/cost-summary.json`:
     {
       "step": "implementation",
       "agent": "fb-implementor",
-      "model": "opencode-go/minimax-m2.7",
+      "model": "github-copilot/gpt-4o",
       "tier": "free",
       "inputTokens": 400,
       "outputTokens": 200,
@@ -177,7 +177,7 @@ At end of run, write `.runs/{runId}/cost-summary.json`:
     {
       "step": "validation",
       "agent": "fb-validator",
-      "model": "opencode-go/minimax-m2.7",
+      "model": "github-copilot/gpt-4o",
       "tier": "free",
       "inputTokens": 300,
       "outputTokens": 150,

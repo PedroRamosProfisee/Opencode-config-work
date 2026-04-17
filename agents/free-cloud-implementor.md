@@ -1,7 +1,7 @@
 ---
 name: free-cloud-implementor
-description: FC pipeline coordinator. Same as CC but fully free — reviewer uses minimax instead of Haiku. Phase-summary compaction. C5 test-writer integration.
-model: opencode-go/minimax-m2.7
+description: FC pipeline coordinator. Same as CC but fully free — reviewer uses gpt-4o instead of Haiku. Phase-summary compaction. C5 test-writer integration.
+model: github-copilot/gpt-4o
 fallback_models:
   - github-copilot/gpt-4o
 mode: subagent
@@ -43,7 +43,7 @@ permissions:
 # Free Cloud Implementor — Coordinator
 
 You are the **Coordinator** of the Free Cloud pipeline.
-Same structure as Cheap Cloud but **fully free** — reviewer uses minimax.
+Same structure as Cheap Cloud but **fully free** — reviewer uses gpt-4o.
 
 ## CRITICAL — Pipeline Enforcement
 
@@ -74,12 +74,12 @@ You MUST follow this exact sequence:
 | Agent | Model | Role |
 |-------|-------|------|
 | `fc-planner` | Opus 4.6 (fallback: Sonnet 4.6) | Task decomposition |
-| `fc-implementor` | minimax-m2.7 | Code changes (N× parallel) |
-| `fc-tester` | minimax-m2.7 | Build + test |
-| `fc-reviewer` | minimax-m2.7 | Diff-based review |
+| `fc-implementor` | gpt-4o | Code changes (N× parallel) |
+| `fc-tester` | gpt-4o | Build + test |
+| `fc-reviewer` | gpt-4o | Diff-based review |
 | `mm-test-writer` | Opus 4.6 (fallback: GPT 5.4) | C5 test writing |
 
-**Key difference from CC:** Reviewer uses minimax (free) instead of Haiku.
+**Key difference from CC:** Reviewer uses gpt-4o (free) instead of Haiku.
 
 ## Pipeline
 

@@ -1,7 +1,7 @@
 ---
 name: cheap-cloud-implementor
-description: CC pipeline coordinator. Spawns Opus planner, parallel minimax implementors, minimax tester, and Haiku reviewer. Reads INSTRUCTIONS.md. Phase-summary compaction.
-model: opencode-go/minimax-m2.7
+description: CC pipeline coordinator. Spawns Opus planner, parallel gpt-4o implementors, gpt-4o tester, and Haiku reviewer. Reads INSTRUCTIONS.md. Phase-summary compaction.
+model: github-copilot/gpt-4o
 fallback_models:
   - github-copilot/claude-haiku-4.5
 mode: subagent
@@ -76,8 +76,8 @@ You are the Coordinator. You MUST follow this exact sequence:
 | Agent | Model | Role |
 |-------|-------|------|
 | `cc-planner` | Opus 4.6 (fallback: Sonnet 4.6) | Task decomposition, parallelization |
-| `cc-implementor` | minimax-m2.7 | Code changes (spawned N× for parallel) |
-| `cc-tester` | minimax-m2.7 | Build + test execution |
+| `cc-implementor` | gpt-4o | Code changes (spawned N× for parallel) |
+| `cc-tester` | gpt-4o | Build + test execution |
 | `cc-reviewer` | Haiku 4.5 | Diff-based code review |
 | `mm-test-writer` | Opus 4.6 (fallback: GPT 5.4) | C5 post-phase test writing |
 

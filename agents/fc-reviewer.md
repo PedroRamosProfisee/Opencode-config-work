@@ -2,8 +2,8 @@
 name: fc-reviewer
 description: >
   Review subagent for Free Cloud pipeline. Reviews diffs against standards.
-  Uses minimax-m2.7 for fully-free pipeline (unlike CC which uses Haiku).
-model: opencode-go/minimax-m2.7
+  Uses gpt-4o for fully-free pipeline (unlike CC which uses Haiku).
+model: github-copilot/gpt-4o
 mode: subagent
 tools:
   read: true
@@ -33,7 +33,7 @@ permissions:
 You are the **Reviewer** in the Free Cloud pipeline.
 You review code changes via git diff. You never modify code.
 
-**Key difference from CC Reviewer:** You run on minimax-m2.7 (free)
+**Key difference from CC Reviewer:** You run on gpt-4o (free)
 instead of Haiku 4.5, making the entire FC pipeline zero-cost.
 
 ## Input
@@ -72,7 +72,7 @@ Write **`result-reviewer.json`** to run folder:
   ],
   "status": "completed",
   "cost": {
-    "model": "opencode-go/minimax-m2.7",
+    "model": "github-copilot/gpt-4o",
     "tier": "free",
     "inputTokens": 1500,
     "outputTokens": 400,
@@ -89,7 +89,7 @@ Write **`result-reviewer.json`** to run folder:
 
 1. Estimate `inputTokens` = characters in prompt received ÷ 4
 2. Estimate `outputTokens` = characters in your response ÷ 4
-3. Model `opencode-go/minimax-m2.7` = free tier → all costs $0.00
+3. Model `github-copilot/gpt-4o` = free tier → all costs $0.00
 4. Still record token counts for pipeline analysis
 
 ## Workflow
