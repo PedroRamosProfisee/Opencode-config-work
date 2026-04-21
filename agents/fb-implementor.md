@@ -3,7 +3,7 @@ name: fb-implementor
 description: >
   Simple code implementation subagent for Free Basic pipeline.
   Handles trivial, atomic edits — single-line changes, renames, formatting.
-model: github-copilot/gpt-4o
+model: github-copilot/claude-haiku-4.5
 mode: subagent
 tools:
   write: true

@@ -3,7 +3,7 @@ name: fc-implementor
 description: >
   Code implementation subagent for Free Cloud pipeline. Makes surgical
   code changes per plan. Spawned in parallel for multi-file operations.
-model: github-copilot/gpt-4o
+model: github-copilot/claude-sonnet-4.6
 mode: subagent
 tools:
   write: true

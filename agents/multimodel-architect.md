@@ -1,7 +1,7 @@
 ---
 name: multimodel-architect
 description: MM swarm coordinator. Orchestrates unified C1-C5 pipeline phases (Plan, Instruct, Execute, Review, Test) via subagents. 8K context budget with phase-summary.json compaction.
-model: github-copilot/gpt-4o
+model: github-copilot/claude-sonnet-4.6
 mode: primary
 tools:
   write: true

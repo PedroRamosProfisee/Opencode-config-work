@@ -1,7 +1,7 @@
 ---
 name: cheap-cloud-implementor
 description: CC pipeline coordinator. Spawns Opus planner, parallel gpt-4o implementors, gpt-4o tester, and Haiku reviewer. Reads INSTRUCTIONS.md. Phase-summary compaction.
-model: github-copilot/gpt-4o
+model: github-copilot/claude-sonnet-4.6
 fallback_models:
   - github-copilot/claude-haiku-4.5
 mode: subagent

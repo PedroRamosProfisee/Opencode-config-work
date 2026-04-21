@@ -1,7 +1,7 @@
 ---
 name: free-cloud-implementor
 description: FC pipeline coordinator. Same as CC but fully free — reviewer uses gpt-4o instead of Haiku. Phase-summary compaction. C5 test-writer integration.
-model: github-copilot/gpt-4o
+model: github-copilot/claude-sonnet-4.6
 fallback_models:
   - github-copilot/gpt-4o
 mode: subagent

@@ -3,7 +3,7 @@ name: cc-tester
 description: >
   Testing subagent for Cheap Cloud pipeline. Runs build and test commands,
   reports pass/fail results. Does not modify code.
-model: github-copilot/gpt-4o
+model: github-copilot/claude-haiku-4.5
 mode: subagent
 tools:
   write: true

@@ -4,7 +4,7 @@ description: >
   Code implementation subagent for Cheap Cloud pipeline. Makes surgical
   code changes per plan. Spawned in parallel for multi-file operations.
   gpt-4o for cost-effective code generation.
-model: github-copilot/gpt-4o
+model: github-copilot/claude-haiku-4.5
 fallback_models:
   - github-copilot/claude-haiku-4.5
 mode: subagent

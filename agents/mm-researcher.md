@@ -5,7 +5,7 @@ temperature: 0.1
 model: github-copilot/claude-opus-4.6
 fallback_models:
   - github-copilot/gpt-5.4
-reasoningEffort: extra_high
+reasoningEffort: high
 tier: premium
 tools:
   read: true

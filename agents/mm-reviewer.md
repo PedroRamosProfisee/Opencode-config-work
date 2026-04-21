@@ -5,7 +5,7 @@ model: github-copilot/claude-haiku-4.5
 fallback_models:
   - github-copilot/gpt-4o
   - github-copilot/gpt-4o
-reasoningEffort: extra_high
+reasoningEffort: high
 mode: subagent
 tools:
   read: true

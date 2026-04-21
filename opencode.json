@@ -16,7 +16,7 @@
     "@cortexkit/opencode-magic-context"
   ],
   "compaction": {
-    "auto": true,
+    "auto": false,
     "prune": false,
     "reserved": 20000
   },

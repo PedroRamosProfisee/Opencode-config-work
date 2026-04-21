@@ -1,7 +1,7 @@
 ---
 name: migration-coordinator
 description: Type H Migration pipeline coordinator. High-risk operations with mandatory AUQ. Impact analysis pre-phase, full test suite post-phase.
-model: github-copilot/gpt-4o
+model: github-copilot/claude-sonnet-4.6
 fallback_models:
   - github-copilot/gpt-4o
 mode: subagent

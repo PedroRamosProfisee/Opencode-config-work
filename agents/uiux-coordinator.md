@@ -1,7 +1,7 @@
 ---
 name: uiux-coordinator
 description: Type L UI/UX pipeline coordinator. Media-interpreter pre-phase (always), design analysis, AUQ for direction, design-focused review.
-model: github-copilot/gpt-4o
+model: github-copilot/claude-sonnet-4.6
 fallback_models:
   - github-copilot/gpt-4o
 mode: subagent

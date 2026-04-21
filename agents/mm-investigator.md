@@ -5,7 +5,7 @@ model: github-copilot/claude-opus-4.6
 fallback_models:
   - github-copilot/gpt-5.4
   - github-copilot/gemini-2.5-pro
-reasoningEffort: extra_high
+reasoningEffort: high
 mode: subagent
 tools:
   read: true

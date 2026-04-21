@@ -3,7 +3,7 @@ name: fc-reviewer
 description: >
   Review subagent for Free Cloud pipeline. Reviews diffs against standards.
   Uses gpt-4o for fully-free pipeline (unlike CC which uses Haiku).
-model: github-copilot/gpt-4o
+model: github-copilot/claude-sonnet-4.6
 mode: subagent
 tools:
   read: true

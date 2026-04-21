@@ -1,7 +1,7 @@
 ---
 name: qa-coordinator
 description: Type J QA pipeline coordinator. Coverage analysis pre-phase, test strategy planning, test writing, test execution.
-model: github-copilot/gpt-4o
+model: github-copilot/claude-sonnet-4.6
 fallback_models:
   - github-copilot/gpt-4o
 mode: subagent

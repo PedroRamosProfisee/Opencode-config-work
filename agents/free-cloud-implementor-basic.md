@@ -4,7 +4,7 @@ description: >
   Lightweight swarm coordinator for trivial tasks. 3-role pipeline:
   coordinator → implementor → validator. No planner needed for atomic edits.
   Fully free — all subagents on gpt-4o.
-model: github-copilot/gpt-4o
+model: github-copilot/claude-sonnet-4.6
 fallback_models:
   - github-copilot/gpt-4o
 mode: subagent

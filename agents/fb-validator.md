@@ -3,7 +3,7 @@ name: fb-validator
 description: >
   Combined tester+reviewer for Free Basic pipeline. Runs build check
   and basic code review in one pass. Optimized for trivial tasks.
-model: github-copilot/gpt-4o
+model: github-copilot/claude-haiku-4.5
 mode: subagent
 tools:
   read: true

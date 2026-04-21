@@ -3,7 +3,7 @@ name: fc-tester
 description: >
   Testing subagent for Free Cloud pipeline. Runs build and test commands,
   reports pass/fail. Does not modify code.
-model: github-copilot/gpt-4o
+model: github-copilot/claude-sonnet-4.6
 mode: subagent
 tools:
   write: true

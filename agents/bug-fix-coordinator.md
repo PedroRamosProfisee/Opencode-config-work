@@ -1,7 +1,7 @@
 ---
 name: bug-fix-coordinator
 description: Type F Bug Fix pipeline coordinator. Orchestrates mm-debugger (RCA) then C1-C5 core pipeline with regression test focus.
-model: github-copilot/gpt-4o
+model: github-copilot/claude-sonnet-4.6
 fallback_models:
   - github-copilot/gpt-4o
 mode: subagent
