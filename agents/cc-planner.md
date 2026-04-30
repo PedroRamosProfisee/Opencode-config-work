@@ -3,11 +3,11 @@ name: cc-planner
 description: >
   Planning subagent for Cheap Cloud pipeline. Decomposes tasks into subtasks,
   identifies files, dependencies, and parallelization opportunities.
-  Opus 4.6 for maximum planning quality (with Sonnet 4.6 fallback).
-model: github-copilot/claude-opus-4.6
+  GPT 5.5 extra-high reasoning for maximum planning quality (with Sonnet 4.6 fallback).
+model: github-copilot/gpt-5.5
 fallback_models:
   - github-copilot/claude-sonnet-4.6
-reasoningEffort: max
+reasoningEffort: xhigh
 mode: subagent
 tools:
   read: true
@@ -82,14 +82,14 @@ Write **`plan.json`** to run folder:
   "assumptions": ["Assumption 1"],
   "status": "completed",
   "cost": {
-    "model": "github-copilot/claude-opus-4.6",
+    "model": "github-copilot/gpt-5.5",
     "tier": "premium",
     "inputTokens": 1200,
     "outputTokens": 800,
     "inputCostUSD": 0.0180,
     "outputCostUSD": 0.0600,
     "totalCostUSD": 0.0780,
-    "note": "Opus 4.6 rates. Falls back to Sonnet 4.6 on failure."
+    "note": "GPT 5.5 extra-high reasoning. Falls back to Claude Sonnet 4.6 on failure."
   },
   "createdAt": "ISO 8601"
 }

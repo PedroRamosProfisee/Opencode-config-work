@@ -2,9 +2,15 @@
 
 This directory contains context files for education, coaching, and teaching methodologies.
 
+**Last Updated**: 2026-04-25
+
+---
+
 ## Available Context Files
 
-*No context files yet. This category is ready for learning-related context.*
+| File | Description | Priority |
+|------|-------------|----------|
+| [agent-communication-profile.md](agent-communication-profile.md) | User-specific communication and teaching preferences derived from learning assessments | high |
 
 ## Planned Context Files
 
@@ -16,3 +22,8 @@ This directory contains context files for education, coaching, and teaching meth
 ## Usage
 
 These context files will be referenced by learning-focused agents to ensure consistent teaching methodologies, effective coaching techniques, and learner-centered approaches.
+
+### For user-specific learning support
+1. Load `agent-communication-profile.md`
+2. Adapt explanation style, feedback style, and study recommendations to the user profile
+3. Treat profile data as hypotheses/preferences, not hard constraints

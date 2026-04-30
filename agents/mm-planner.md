@@ -1,11 +1,10 @@
 ---
 name: mm-planner
 description: Unified C1 PLAN phase agent. Combines codebase investigation and task decomposition into wave-based parallel execution plans. CodeSight integrated.
-model: github-copilot/claude-opus-4.6
+model: github-copilot/gpt-5.5
 fallback_models:
-  - github-copilot/gpt-5.4
   - github-copilot/claude-sonnet-4.6
-reasoningEffort: max
+reasoningEffort: xhigh
 mode: subagent
 tools:
   read: true
@@ -99,14 +98,14 @@ Write **`plan.json`** to run folder:
   "assumptions": ["Assumption 1"],
   "status": "completed",
   "cost": {
-    "model": "github-copilot/claude-opus-4.6",
+    "model": "github-copilot/gpt-5.5",
     "tier": "premium",
     "inputTokens": 2000,
     "outputTokens": 1000,
     "inputCostUSD": 0.0300,
     "outputCostUSD": 0.0750,
     "totalCostUSD": 0.1050,
-    "note": "Opus 4.6 rates. Falls back to GPT 5.4 / Sonnet 4.6 on failure."
+    "note": "GPT 5.5 extra-high reasoning. Falls back to Claude Sonnet 4.6 on failure."
   },
   "createdAt": "ISO 8601"
 }

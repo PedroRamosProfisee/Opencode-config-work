@@ -2,12 +2,12 @@
 name: mm-scene-tester
 description: >
   Scene testing subagent for MM swarm. Analyzes scene structure, generates test
-  scenarios, executes via godot-ai-playtest, validates results. Opus 4.6 for
-  complex test planning (with GPT 5.4 as fallback).
-model: github-copilot/claude-opus-4.6
+  scenarios, executes via godot-ai-playtest, validates results. GPT 5.5 extra-high
+  reasoning for complex test planning (with Claude Sonnet 4.6 as fallback).
+model: github-copilot/gpt-5.5
 fallback_models:
-  - github-copilot/gpt-5.4
-reasoningEffort: extra_high
+  - github-copilot/claude-sonnet-4.6
+reasoningEffort: xhigh
 mode: subagent
 tools:
   read: true
@@ -119,14 +119,14 @@ Write **`scene-test-results.json`** to run folder:
   },
   "status": "completed|failed",
   "cost": {
-    "model": "github-copilot/claude-opus-4.6",
+    "model": "github-copilot/gpt-5.5",
     "tier": "premium",
     "inputTokens": 3500,
     "outputTokens": 2000,
     "inputCostUSD": 0.0525,
     "outputCostUSD": 0.1500,
     "totalCostUSD": 0.2025,
-    "note": "Opus 4.6 rates. Falls back to GPT 5.4 on failure."
+    "note": "GPT 5.5 extra-high reasoning. Falls back to Claude Sonnet 4.6 on failure."
   },
   "createdAt": "ISO 8601"
 }
@@ -136,10 +136,10 @@ Write **`scene-test-results.json`** to run folder:
 
 1. Estimate `inputTokens` = characters in prompt received ÷ 4
 2. Estimate `outputTokens` = characters in your response ÷ 4
-3. Rates: input=$0.015/1K, output=$0.075/1K (Opus 4.6)
+3. Rates: see current provider pricing for GPT 5.5 / Claude Sonnet 4.6
 4. `inputCostUSD = inputTokens * 0.015 / 1000`
 5. `outputCostUSD = outputTokens * 0.075 / 1000`
-6. **Fallback**: If Opus 4.6 fails, retry with `github-copilot/gpt-5.4` (flat rate).
+6. **Fallback**: If GPT 5.5 fails, retry with `github-copilot/claude-sonnet-4.6`.
 
 ## Workflow
 

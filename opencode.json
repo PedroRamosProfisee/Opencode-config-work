@@ -7,6 +7,7 @@
     "rules/bash-safety.md",
     "rules/context-management.md",
     "rules/patterns-common.md",
+    "rules/learner-communication-preferences.md",
     "rules/vibe-coding-summary.md",
     "If a file named `.codesight/CODESIGHT.md` exists in the project root, read it at the start of the session and use it as a file and symbol index. Do not read it automatically if it does not exist.",
     "When unclear on requirements, use AUQ (ask-user-questions) MCP tool instead of guessing. Batch multiple questions into one call. Never guess when you can ask."

@@ -1,11 +1,10 @@
 ---
 name: mm-test-writer
 description: C5 post-phase test writer. Writes tests based on implementation results, uses CodeSight for coverage gaps. Multi-language, structured output.
-model: github-copilot/claude-opus-4.6
+model: github-copilot/gpt-5.5
 fallback_models:
-  - github-copilot/gpt-5.4
-  - github-copilot/gpt-4.1
-reasoningEffort: extra_high
+  - github-copilot/claude-sonnet-4.6
+reasoningEffort: xhigh
 mode: subagent
 tools:
   read: true
@@ -115,14 +114,14 @@ Write **`test-report.json`** to run folder:
   "coverageAfter": "Estimated improvement",
   "status": "completed",
   "cost": {
-    "model": "github-copilot/claude-opus-4.6",
+    "model": "github-copilot/gpt-5.5",
     "tier": "premium",
     "inputTokens": 3000,
     "outputTokens": 2000,
     "inputCostUSD": 0.0450,
     "outputCostUSD": 0.1500,
     "totalCostUSD": 0.1950,
-    "note": "Opus 4.6 rates. Falls back to GPT 5.4 on failure."
+    "note": "GPT 5.5 extra-high reasoning. Falls back to Claude Sonnet 4.6 on failure."
   },
   "createdAt": "ISO 8601"
 }

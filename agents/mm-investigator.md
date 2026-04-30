@@ -1,11 +1,10 @@
 ---
 name: mm-investigator
 description: Deep analysis subagent for MM swarm. Reads codebase with CodeSight integration, analyzes task complexity, identifies dependencies, selects optimal model, produces investigation report and phase summary.
-model: github-copilot/claude-opus-4.6
+model: github-copilot/gpt-5.5
 fallback_models:
-  - github-copilot/gpt-5.4
-  - github-copilot/gemini-2.5-pro
-reasoningEffort: high
+  - github-copilot/claude-sonnet-4.6
+reasoningEffort: xhigh
 mode: subagent
 tools:
   read: true
@@ -155,14 +154,14 @@ Write **`investigation-report.json`** to run folder:
   },
   "status": "completed",
   "cost": {
-    "model": "github-copilot/claude-opus-4.6",
+    "model": "github-copilot/gpt-5.5",
     "tier": "premium",
     "inputTokens": 3000,
     "outputTokens": 1200,
     "inputCostUSD": 0.0450,
     "outputCostUSD": 0.0900,
     "totalCostUSD": 0.1350,
-    "note": "Opus 4.6 rates. Falls back to GPT 5.4 (flat rate) on failure."
+    "note": "GPT 5.5 extra-high reasoning. Falls back to Claude Sonnet 4.6 on failure."
   },
   "createdAt": "ISO 8601"
 }
@@ -212,7 +211,7 @@ Also write **`phase-summary.json`** to run folder:
 ## Constraints
 
 - **Analysis only** — Do not modify any code
-- **Be thorough** — You are Opus 4.6 with extra_high reasoning. Find edge cases, hidden dependencies
+- **Be thorough** — You are Opus 4.6 with xhigh reasoning. Find edge cases, hidden dependencies
 - **Distill for downstream** — Handoff writer uses your report. Include everything they need
 - **Time-box** — Don't read entire codebase. Use CodeSight for overview, then drill into task-relevant files
 - **No git commits/pushes** — Read-only git operations

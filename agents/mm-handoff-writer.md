@@ -1,11 +1,10 @@
 ---
 name: mm-handoff-writer
-description: C2 INSTRUCT phase agent. Reads investigation/plan and produces INSTRUCTIONS.md with complete implementation code plus handoff.json metadata sidecar. Opus 4.6 for precision.
-model: github-copilot/claude-opus-4.6
+description: C2 INSTRUCT phase agent. Reads investigation/plan and produces INSTRUCTIONS.md with complete implementation code plus handoff.json metadata sidecar. GPT 5.5 extra-high reasoning for precision.
+model: github-copilot/gpt-5.5
 fallback_models:
-  - github-copilot/gpt-5.4
   - github-copilot/claude-sonnet-4.6
-reasoningEffort: extra_high
+reasoningEffort: xhigh
 mode: subagent
 tools:
   read: true
@@ -107,14 +106,14 @@ Write **`handoff.json`** to run folder — this contains routing info, NOT instr
   },
   "status": "pending",
   "cost": {
-    "model": "github-copilot/claude-opus-4.6",
+    "model": "github-copilot/gpt-5.5",
     "tier": "premium",
     "inputTokens": 2000,
     "outputTokens": 800,
     "inputCostUSD": 0.0300,
     "outputCostUSD": 0.0600,
     "totalCostUSD": 0.0900,
-    "note": "Opus 4.6 rates. Falls back to Sonnet 4.6 on failure."
+    "note": "GPT 5.5 extra-high reasoning. Falls back to Claude Sonnet 4.6 on failure."
   },
   "createdAt": "ISO 8601"
 }

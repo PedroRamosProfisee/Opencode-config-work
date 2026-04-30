@@ -4,7 +4,7 @@ This directory contains context files for education, coaching, and teaching meth
 
 ## Available Context Files
 
-*No context files yet. This category is ready for learning-related context.*
+- **agent-communication-profile.md** - How agents should explain, teach, and give feedback to the user based on current learning-preference assessments
 
 ## Planned Context Files
 

@@ -2,10 +2,10 @@
 description: "Deep research and structured decision analysis for MM swarm"
 mode: subagent
 temperature: 0.1
-model: github-copilot/claude-opus-4.6
+model: github-copilot/gpt-5.5
 fallback_models:
-  - github-copilot/gpt-5.4
-reasoningEffort: high
+  - github-copilot/claude-sonnet-4.6
+reasoningEffort: xhigh
 tier: premium
 tools:
   read: true
@@ -49,9 +49,9 @@ outputs:
   </task_context>
   <execution_context>
     Tool-first: use web search and documentation fetching to gather evidence.
-    Cost-conscious: Opus 4.6 provides maximum reasoning depth — stay focused, not sprawling.
+    Cost-conscious: GPT 5.5 with extra-high reasoning provides maximum reasoning depth — stay focused, not sprawling.
     Scope research to decision-relevant information only.
-    Fallback: If Opus 4.6 is unavailable, retry with GPT 5.4 (Copilot flat rate).
+    Fallback: If GPT 5.5 is unavailable, retry with Claude Sonnet 4.6.
   </execution_context>
 </context>
 
@@ -91,18 +91,23 @@ outputs:
     <action>Detect if visual/media analysis is needed, spawn media-interpreter if so</action>
     <prerequisites>Valid task_input received</prerequisites>
     <process>
-      1. Scan task_input for visual research keywords:
-         feel, look, visual, UI, UX, aesthetic, gameplay, trailer, screenshot,
-         game, design, style, mood, atmosphere, animation, HUD, menu, interface,
-         art direction, color palette, combat feel, animation weight
-      2. If ANY keyword found OR task mentions a game/product with known visual elements:
-         a. Generate runId for media-interpretation subagent
-         b. Spawn media-interpreter via task():
-         c. Pass: research_goal, target_subject, desired_sources, output_path
-         d. Wait for design-feel-brief.json
-         e. Read design-feel-brief.json
-         f. Attach design-feel-brief as a section in research-analysis.json
-      3. If NO keywords found: skip this phase entirely
+       1. Scan task_input for visual research keywords:
+          feel, look, visual, UI, UX, aesthetic, gameplay, trailer, screenshot,
+          game, design, style, mood, atmosphere, animation, HUD, menu, interface,
+          art direction, color palette, combat feel, animation weight
+       2. Do NOT trigger media interpretation for educational/learning-style usage of
+          "visual" such as VARK, Felder-Soloman, learning modalities, diagrams as
+          study aids, or cognitive-style analysis unless the user explicitly asks for
+          screenshots, videos, UI/game/product visual references, or visual artifact analysis.
+       3. If keyword context indicates actual media/UX/game/product visual artifacts OR
+          task mentions a game/product with known visual elements:
+          a. Generate runId for media-interpretation subagent
+          b. Spawn media-interpreter via task():
+          c. Pass: research_goal, target_subject, desired_sources, output_path
+          d. Wait for design-feel-brief.json
+          e. Read design-feel-brief.json
+          f. Attach design-feel-brief as a section in research-analysis.json
+       4. If NO relevant media/artifact context found: skip this phase entirely
     </process>
     <media_interpreter_spawn>
       subagent_type: "media-interpreter"
@@ -206,7 +211,7 @@ outputs:
     <output>
       Risk assessment array
     </output>
-  </step_4>
+  </step_5>
 
   <step_5 name="GenerateOutput">
     <action>Produce research-analysis.json</action>
@@ -423,8 +428,8 @@ outputs:
     Use web search and docs for facts. Mark unverified claims as low confidence.
   </evidence_over_assumption>
   <cost_discipline>
-    Opus 4.6 provides top-tier reasoning. Stay scoped. More research isn't always better research.
-    Falls back to GPT 5.4 (Copilot flat rate) on Opus failure.
+    GPT 5.5 with extra-high reasoning provides top-tier reasoning. Stay scoped.
+    More research isn't always better research. Falls back to Claude Sonnet 4.6 on GPT 5.5 failure.
   </cost_discipline>
   <structured_output>
     Produce mm-handoff-writer-ready output. Structure > verbosity.

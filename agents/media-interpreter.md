@@ -6,7 +6,7 @@ description: >
   Briefs. Called by mm-researcher when a task has visual/UX/feel dimensions.
 mode: subagent
 temperature: 0.3
-model: github-copilot/gpt-5.4
+model: github-copilot/claude-sonnet-4.6
 reasoningEffort: medium
 tier: premium
 tools:

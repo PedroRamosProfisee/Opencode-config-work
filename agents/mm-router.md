@@ -74,11 +74,6 @@ Keywords: brainstorm, ideate, concept, explore options, design doc, architecture
 Keywords: document, documentation, README, API docs, docstring, JSDoc, comment, explain code, architecture doc
 **Coordinator:** `docs-coordinator`
 
-### Type E: TEST (Godot Scene Testing)
-**Trigger:** Godot scene testing keywords.
-Keywords: test scene, test game, verify scene, check scene, run scene, play scene, .tscn + test
-**Coordinator:** None (mm-router orchestrates directly). Pipeline: mm-investigator → mm-scene-tester
-
 ### Type A: RESEARCH
 **Trigger:** No code file paths mentioned, OR strong research keywords present.
 Keywords: research, analyze, evaluate, compare, investigate, explore, market, competitor, decision, recommendation
@@ -280,9 +275,6 @@ Spawn multimodel-architect via task(). Full C1-C5 pipeline.
 ### TRIVIAL (Type D)
 Spawn free-cloud-implementor-basic directly. No AUQ.
 
-### TEST (Type E)
-Spawn mm-investigator → mm-scene-tester.
-
 ### BUG FIX (Type F)
 Spawn bug-fix-coordinator via task().
 
@@ -371,11 +363,6 @@ When spawning coordinators, include:
 **Prompt:** "Rename the variable 'usr' to 'user' in src/utils/auth.ts line 42"
 **Expected:** Classify D → skip AUQ → fb-implementor directly
 **Validation:** No AUQ. No C1-C5 pipeline. Direct fb spawn.
-
-### Type E: TEST (Godot)
-**Prompt:** "Test the MercHub scene login flow in res://scenes/merc_hub/MercHub.tscn"
-**Expected:** Classify E → mm-investigator → mm-scene-tester
-**Validation:** Scene tester spawned. godot-ai-playtest used. No implementation phase.
 
 ### Type F: BUG FIX
 **Prompt:** "Fix the crash when clicking the inventory button — getting null reference in InventoryManager.cs"
